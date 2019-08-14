@@ -1,0 +1,5 @@
+{
+  "status": "ready",
+  "CONFIG_TODO": "TODO Add/remove to sectionsEnabled",
+  "sectionsEnabled": ["google-ads", "all_sources" ]
+}
