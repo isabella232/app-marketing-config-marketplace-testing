@@ -19,3 +19,8 @@ constant: LINKEDIN_ADS_SCHEMA_NAME {
   value: "default value"
   export: override_required
 }
+
+constant: PINTEREST_ADS_SCHEMA_NAME {
+  value: "default value"
+  export: override_required
+}
