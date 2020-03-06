@@ -16,6 +16,11 @@ view: adwords_config {
   }
 }
 
+view: ad_metrics_base_config {
+  extends: [ad_metrics_base_template]
+  extension: required
+}
+
 view: ad_config {
   extends: [ad_adapter]
   extension: required
@@ -55,8 +60,8 @@ view: google_ad_metrics_base_config {
 # Daily Account Aggregation
 explore: ad_impressions_config {
   extends: [ad_impressions_template]
+  hidden: yes #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extension: required
-  hidden: no     #TODO change hidden:no to hidden:yes if you don't want to expose this Explore
 }
 
 view: ad_impressions_config {
@@ -65,14 +70,15 @@ view: ad_impressions_config {
 }
 
 # Hourly Account Aggregation
-explore: ad_impressions_hour_config {
-  extends: [ad_impressions_hour_template]
+explore: ad_impressions_daily_config {
+  extends: [ad_impressions_daily_template]
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extension: required
 }
 
-view: ad_impressions_hour_config {
-  extends: [ad_impressions_hour_template]
-  extension: required
+  view: ad_impressions_daily_config {
+  extends: [ad_impressions_daily_template]
+    extension: required
 }
 
 # Daily Campaign Aggregation
@@ -87,21 +93,21 @@ view: ad_impressions_campaign_config {
 }
 
 # Hourly Campaign Aggregation
-explore: ad_impressions_campaign_hour_config {
-  extends: [ad_impressions_campaign_hour_template]
+explore: ad_impressions_campaign_daily_config {
+  extends: [ad_impressions_campaign_daily_template]
   extension: required
 }
 
-view: ad_impressions_campaign_hour_config {
-  extends: [ad_impressions_campaign_hour_template]
+view: ad_impressions_campaign_daily_config {
+  extends: [ad_impressions_campaign_daily_template]
   extension: required
 }
 
 # Daily Ad Group Aggregation
 explore: ad_impressions_ad_group_config {
   extends: [ad_impressions_ad_group_template]
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extension: required
-  hidden: no     #TODO change hidden:no to hidden:yes if you don't want to expose this Explore
 }
 
 view: ad_impressions_ad_group_config {
@@ -123,8 +129,8 @@ view: ad_impressions_ad_group_hour_config {
 # Daily Keyword Aggregation
 explore: ad_impressions_keyword_config {
   extends: [ad_impressions_keyword_template]
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extension: required
-  hidden: no     #TODO change hidden:no to hidden:yes if you don't want to expose this Explore
 }
 
 view: ad_impressions_keyword_config {
@@ -134,7 +140,7 @@ view: ad_impressions_keyword_config {
 
 # Daily Ad Aggregation
 explore: ad_impressions_ad_config {
-  hidden:  no
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extends: [ad_impressions_ad_template]
   extension: required
 }
@@ -147,8 +153,8 @@ view: ad_impressions_ad_config {
 # Daily Geo Aggregation
 explore: ad_impressions_geo_config {
   extends: [ad_impressions_geo_template]
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extension: required
-  hidden: no     #TODO change hidden:no to hidden:yes if you don't want to expose this Explore
 }
 
 view: ad_impressions_geo_config {
@@ -159,8 +165,8 @@ view: ad_impressions_geo_config {
 # Daily Age Range Aggregation
 explore: ad_impressions_age_range_config {
   extends: [ad_impressions_age_range_template]
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extension: required
-  hidden: no     #TODO change hidden:no to hidden:yes if you don't want to expose this Explore
 }
 
 view: ad_impressions_age_range_config {
@@ -182,8 +188,8 @@ view: ad_impressions_gender_config {
 # Daily Audience Aggregation
 explore: ad_impressions_audience_config {
   extends: [ad_impressions_audience_template]
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extension: required
-  hidden: no     #TODO change hidden:no to hidden:yes if you don't want to expose this Explore
 }
 
 view: ad_impressions_audience_config {
@@ -205,8 +211,8 @@ view: ad_impressions_parental_status_config {
 # Daily Video Aggregation
 explore: ad_impressions_video_config {
   extends: [ad_impressions_video_template]
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extension: required
-  hidden: no     #TODO change hidden:no to hidden:yes if you don't want to expose this Explore
 }
 
 view: ad_impressions_video_config {
@@ -216,8 +222,8 @@ view: ad_impressions_video_config {
 
 explore: adwords_period_comparison_config {
   extends: [period_fact]
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
   extension: required
-  hidden: no
 }
 
 view: adwords_period_comparison_config {
