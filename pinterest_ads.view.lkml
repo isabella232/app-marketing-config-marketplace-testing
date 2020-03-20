@@ -2,7 +2,7 @@
 
 # TODO: update pinterest Ads schema
 datagroup: pinterest_ads_etl_datagroup {
-  sql_trigger: SELECT COUNT(*) FROM `pinterest_ads.campaign_report` ;;
+  sql_trigger: SELECT COUNT(*) FROM `@{PINTEREST_ADS_SCHEMA_NAME}.campaign_report` ;;
   max_cache_age: "24 hours"
 }
 
