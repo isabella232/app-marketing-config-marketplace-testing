@@ -3,7 +3,7 @@
 
 # TODO: Update Facebook Ads schema
 datagroup: facebook_ads_etl_datagroup {
-  sql_trigger: SELECT COUNT(*) FROM `facebook_ads_fivetran.ads_insights` ;;
+  sql_trigger: SELECT COUNT(*) FROM `@{FACEBOOK_ADS_SCHEMA_NAME}.ads_insights` ;;
   max_cache_age: "24 hours"
 }
 
