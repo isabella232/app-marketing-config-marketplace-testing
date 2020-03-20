@@ -2,7 +2,7 @@
 
 # TODO: update Bing Ads schema
 datagroup: bing_ads_etl_datagroup {
-  sql_trigger: SELECT COUNT(*) FROM `bings_ads_for_looker.ad_group_performance_daily_report` ;;
+  sql_trigger: SELECT COUNT(*) FROM `@{BING_ADS_SCHEMA_NAME}.ad_group_performance_daily_report` ;;
   max_cache_age: "24 hours"
 }
 
