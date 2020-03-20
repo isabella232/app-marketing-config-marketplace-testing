@@ -3,7 +3,7 @@
 
 # TODO: Update LinkedIn Ads schema
 datagroup: linkedin_ads_etl_datagroup {
-  sql_trigger: SELECT COUNT(*) FROM `linkedin_ads.ad_analytics_by_campaign` ;;
+  sql_trigger: SELECT COUNT(*) FROM `@{LINKEDIN_ADS_SCHEMA_NAME}.ad_analytics_by_campaign` ;;
   max_cache_age: "24 hours"
 }
 
