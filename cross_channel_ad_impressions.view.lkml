@@ -80,7 +80,7 @@ view: cross_channel_ad_impressions_dt_config {
           pinterest_ads_ad_impressions.Clicks AS clicks,
           pinterest_ads_ad_impressions.ConversionValue AS conversionvalue,
           null as linear_network_week_sum
-      FROM ${pinterest_ads_ad_impressions.SQL_TABLE_NAME} as pinterest_ads_ad_impressions
+      FROM ${pinterest_ads_ad_impressions.SQL_TABLE_NAME} as pinterest_ads_ad_impressions ;;
   }
 }
 
