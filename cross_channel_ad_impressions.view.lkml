@@ -68,7 +68,7 @@ view: cross_channel_ad_impressions_dt_config {
         pinterest_ads_ad_impressions._date AS _date,
         pinterest_ads_ad_impressions.account_id AS account_id,
         pinterest_ads_ad_impressions.account_name AS account_name,
-        0 AS campaign_id,
+        '0' AS campaign_id,
         "N/A" AS campaign_name,
         pinterest_ads_ad_impressions.ad_group_id AS ad_group_id,
         pinterest_ads_ad_impressions.ad_group_name AS ad_group_name,
