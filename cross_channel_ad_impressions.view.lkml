@@ -22,8 +22,7 @@ view: cross_channel_ad_impressions_dt_config {
           google_ads_ad_impressions.Cost AS cost,
           google_ads_ad_impressions.Conversions AS conversions,
           google_ads_ad_impressions.Clicks AS clicks,
-          google_ads_ad_impressions.ConversionValue AS conversionvalue,
-          null as linear_network_week_sum
+          google_ads_ad_impressions.ConversionValue AS conversionvalue
       FROM ${google_ads_ad_impressions.SQL_TABLE_NAME} as google_ads_ad_impressions
       UNION ALL
       SELECT
@@ -41,8 +40,7 @@ view: cross_channel_ad_impressions_dt_config {
           facebook_ads_ad_impressions.Cost AS cost,
           facebook_ads_ad_impressions.Conversions AS conversions,
           facebook_ads_ad_impressions.Clicks AS clicks,
-          null AS conversionvalue,
-          null as linear_network_week_sum
+          null AS conversionvalue
       FROM ${facebook_ads_ad_impressions.SQL_TABLE_NAME} as facebook_ads_ad_impressions
       UNION ALL
       SELECT
@@ -78,8 +76,7 @@ view: cross_channel_ad_impressions_dt_config {
         pinterest_ads_ad_impressions.Cost AS cost,
         pinterest_ads_ad_impressions.Conversions AS conversions,
         pinterest_ads_ad_impressions.Clicks AS clicks,
-        pinterest_ads_ad_impressions.ConversionValue AS conversionvalue,
-        null as linear_network_week_sum
+        pinterest_ads_ad_impressions.ConversionValue AS conversionvalue
         FROM ${pinterest_ads_ad_impressions.SQL_TABLE_NAME} as pinterest_ads_ad_impressions;;
   }
 }
