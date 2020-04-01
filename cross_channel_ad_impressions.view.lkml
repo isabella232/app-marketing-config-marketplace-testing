@@ -34,7 +34,7 @@ view: cross_channel_ad_impressions_dt_config {
           facebook_ads_ad_impressions.account_name AS account_name,
           facebook_ads_ad_impressions.campaign_id AS campaign_id,
           facebook_ads_ad_impressions.campaign_name AS campaign_name,
-          facebook_ads_ad_impressions.ad_group_id AS ad_group_id,
+          CAST(facebook_ads_ad_impressions.ad_group_id  AS STRING) AS ad_group_id,
           facebook_ads_ad_impressions.ad_group_name AS ad_group_name,
           facebook_ads_ad_impressions.Impressions AS impressions,
           facebook_ads_ad_impressions.Cost AS cost,
