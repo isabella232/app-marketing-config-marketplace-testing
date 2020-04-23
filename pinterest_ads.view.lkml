@@ -68,7 +68,7 @@ view: pinterest_ad_impressions_ad_config {
 explore: pinterest_period_comparison_config {
   extends: [pinterest_period_fact]
   extension: required
-  hidden: yes
+  group_label: "Marketing Analytics"
 }
 
 view: pinterest_period_comparison_config {
