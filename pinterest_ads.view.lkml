@@ -25,6 +25,8 @@ view: pinterest_ad_metrics_base_config {
 explore: pinterest_ad_impressions_config {
   extends: [pinterest_ad_impressions_template]
   extension: required
+  group_label: "Marketing Analytics"
+  hidden: no
 }
 
 view: pinterest_ad_impressions_config {
@@ -36,6 +38,8 @@ view: pinterest_ad_impressions_config {
 explore: pinterest_ad_impressions_campaign_config {
   extends: [pinterest_ad_impressions_campaign_template]
   extension: required
+  group_label: "Marketing Analytics"
+  hidden: no
 }
 
 view: pinterest_ad_impressions_campaign_config {
@@ -68,6 +72,7 @@ view: pinterest_ad_impressions_ad_config {
 explore: pinterest_period_comparison_config {
   extends: [pinterest_period_fact]
   extension: required
+  hidden: no
   group_label: "Marketing Analytics"
 }
 
