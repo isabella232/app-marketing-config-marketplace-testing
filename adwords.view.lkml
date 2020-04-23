@@ -85,6 +85,7 @@ explore: ad_impressions_daily_config {
 explore: ad_impressions_campaign_config {
   extends: [ad_impressions_campaign_template]
   extension: required
+  group_label: "Marketing Analytics"
 }
 
 view: ad_impressions_campaign_config {
@@ -92,10 +93,10 @@ view: ad_impressions_campaign_config {
   extension: required
 }
 
-# Hourly Campaign Aggregation
 explore: ad_impressions_campaign_daily_config {
   extends: [ad_impressions_campaign_daily_template]
   extension: required
+  hidden: yes #TODO change hidden:yes to hidden:no if you want to expose this Explore
 }
 
 view: ad_impressions_campaign_daily_config {
@@ -119,6 +120,7 @@ view: ad_impressions_ad_group_config {
 explore: ad_impressions_ad_group_hour_config {
   extends: [ad_impressions_ad_group_hour_template]
   extension: required
+  hidden: yes #TODO change hidden:yes to hidden:no if you want to expose this Explore
 }
 
 view: ad_impressions_ad_group_hour_config {
@@ -178,6 +180,7 @@ view: ad_impressions_age_range_config {
 explore: ad_impressions_gender_config {
   extends: [ad_impressions_gender_template]
   extension: required
+  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
 }
 
 view: ad_impressions_gender_config {
@@ -201,6 +204,7 @@ view: ad_impressions_audience_config {
 explore: ad_impressions_parental_status_config {
   extends: [ad_impressions_parental_status_template]
   extension: required
+  hidden: yes  #TODO change hidden:yes to hidden:no if you want to expose this Explore
 }
 
 view: ad_impressions_parental_status_config {
