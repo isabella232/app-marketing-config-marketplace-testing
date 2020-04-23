@@ -57,6 +57,8 @@ view: fb_ad_metrics_base_config {
 explore: fb_ad_impressions_config {
   extends: [fb_ad_impressions_template]
   extension: required
+  group_label: "Marketing Analytics"
+  hidden: no
 }
 
 view: fb_ad_impressions_config {
