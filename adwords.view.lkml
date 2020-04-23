@@ -86,6 +86,7 @@ explore: ad_impressions_campaign_config {
   extends: [ad_impressions_campaign_template]
   extension: required
   group_label: "Marketing Analytics"
+  hidden: no
 }
 
 view: ad_impressions_campaign_config {
@@ -226,7 +227,8 @@ view: ad_impressions_video_config {
 
 explore: adwords_period_comparison_config {
   extends: [period_fact]
-  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
+  hidden: no     
+  group_label: "Marketing Analytics" 
   extension: required
 }
 
