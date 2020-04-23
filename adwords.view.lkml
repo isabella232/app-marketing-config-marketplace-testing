@@ -143,7 +143,8 @@ view: ad_impressions_keyword_config {
 
 # Daily Ad Aggregation
 explore: ad_impressions_ad_config {
-  hidden: yes     #TODO change hidden:yes to hidden:no if you want to expose this Explore
+  group_label: "Marketing Analytics"
+  hidden: no   
   extends: [ad_impressions_ad_template]
   extension: required
 }
