@@ -16,11 +16,6 @@ view: adwords_config {
   }
 }
 
-view: ad_metrics_base_config {
-  extends: [ad_metrics_base_template]
-  extension: required
-}
-
 view: ad_config {
   extends: [ad_adapter]
   extension: required
